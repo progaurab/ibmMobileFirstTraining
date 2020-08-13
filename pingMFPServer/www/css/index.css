@@ -1,0 +1,44 @@
+body {
+    position: static;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    margin: 0px;
+	padding: 0px;
+}
+
+#button_content {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+
+#ping_button {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 240px;
+  font-size: 20px;
+  color: white;
+  background-color: #325c80;
+}
+
+#main {
+  top: 10%;
+  position: absolute;
+  text-align: center;
+  width: 100%
+}
+
+#main_title {
+  font-size: 40px;
+}
+
+#main_status {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#main_info {
+  font-size: 14px;
+  margin-top: 10px;
+}

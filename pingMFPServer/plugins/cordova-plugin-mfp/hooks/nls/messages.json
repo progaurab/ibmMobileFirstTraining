@@ -1,0 +1,20 @@
+{
+    "failedPluginInstall" : "Failed to install plug-in for {0} : \n{1}",
+    "failedPluginPrepare" : "Failed to prepare plug-in for {0} : \n{1}",
+    "failedPluginUninstall" : "Failed to uninstall plug-in for {0} : \n{1}",
+    "hookNotImpl" : "The {0} platform is not supported by {1}. No operation will be performed for the specified platform.",
+    "manuallyMergeMainAct" : "{0} was backed up as MainActivity.original. A MobileFirst Platform Foundation version of {0} was added. If you have made changes in the original {0}, you need to merge them with the current {0} in the {1} directory.",
+    "manuallyMergeAppDelegateM" : "If you made changes to your AppDelegate.m file, manually merge AppDelegate.m.bak with the AppDelegate.m file that is provided with IBM MobileFirst Platform Foundation.",
+    "multipleMainAct": "Multiple candidate Java files (.java files which extend CordovaActivity) found. Using the first applicable file that was detected: {0}.",
+    "noMainAct" : "No Java files found that extend CordovaActivity. Contact IBM Support.",
+    "origMainActRestoreSuccess" : "The original Main Activity, {0}, found at {1}, has been restored as {2}.",
+    "origAppDelegateClassRestoreSuccess" : "Original AppDelegate Class {0} is restored.",
+    "runningStaticAppProps" : "Running static_app_props.js...",
+    "unexpectedErr" : "An unexpected error occurred. Contact IBM support.",
+    "encryptingWebRes" : "Encrypting web resources for {0}.",
+    "webResEncryptionNotSupported" : "Web resource encryption is not supported for {0}; therefore, web resources for {0} will not be encrypted.",
+    "preparing" : "Preparing {0} for {1}",
+    "addApplicationAttribute" : "Adding attribute {0}=\"{1}\" to application tag in {2}",
+    "removeApplicationAttribute" : "Found {0} set to {1}. Will remove from AndroidManifest.xml.",
+    "manuallyMergeMFPAppFile" : "Application class already implemented. Manually merge {0} at path {1} to capture the analytics for the application lifecycle."
+}

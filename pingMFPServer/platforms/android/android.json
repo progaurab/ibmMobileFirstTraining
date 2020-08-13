@@ -1,0 +1,211 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Globalization\"><param name=\"android-package\" value=\"org.apache.cordova.globalization.Globalization\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"OkHttpPlugin\"><param name=\"android-package\" value=\"com.google.cordova.OkHttpPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WLInitializationPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WLInitializationPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"LoggerPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.LoggerPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WLApp\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WLApp\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"NativePage\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.NativePage\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"SecurityPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.SecurityPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"NetworkDetector\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.NetworkDetector\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"DeviceAuth\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.DeviceAuthPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WifiPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WifiPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"FIPSHttpPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.FIPSHttpPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WLCustomDialog\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WLCustomDialog\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WLSplashScreen\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WLSplashScreenPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WLAuthorizationManagerPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WLAuthorizationManagerPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WLDirectUpdatePlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WLDirectUpdatePlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WLNativeXHRPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WLNativeXHRPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WLActionSenderPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WLActionSenderPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WLCertificatePinningPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WLCertificatePinningPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WLResourceRequestPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.WLResourceRequestPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"ChallengeHandlerPlugin\"><param name=\"android-package\" value=\"com.worklight.androidgap.plugin.ChallengeHandlerPlugin\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
+            }
+          ],
+          "/manifest/application": [
+            {
+              "xml": "<activity android:name=\"com.worklight.wlclient.ui.UIActivity\" />",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-okhttp": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-mfp": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification",
+      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification_android",
+      "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "cordova-plugin-globalization.GlobalizationError",
+      "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
+      "pluginId": "cordova-plugin-globalization",
+      "clobbers": [
+        "window.GlobalizationError"
+      ]
+    },
+    {
+      "id": "cordova-plugin-globalization.globalization",
+      "file": "plugins/cordova-plugin-globalization/www/globalization.js",
+      "pluginId": "cordova-plugin-globalization",
+      "clobbers": [
+        "navigator.globalization"
+      ]
+    },
+    {
+      "id": "cordova-plugin-mfp.mfp",
+      "file": "plugins/cordova-plugin-mfp/bootstrap.js",
+      "pluginId": "cordova-plugin-mfp",
+      "runs": true
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.4",
+    "cordova-plugin-device": "2.0.3",
+    "cordova-plugin-dialogs": "2.0.2",
+    "cordova-plugin-globalization": "1.11.0",
+    "cordova-plugin-okhttp": "2.0.0",
+    "cordova-plugin-mfp": "8.0.2020072706"
+  }
+}

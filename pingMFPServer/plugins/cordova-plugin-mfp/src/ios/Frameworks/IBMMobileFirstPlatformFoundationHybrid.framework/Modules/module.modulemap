@@ -1,0 +1,11 @@
+framework module IBMMobileFirstPlatformFoundationHybrid { umbrella header "IBMMobileFirstPlatformFoundationHybrid.h"
+    header "WLAppDelegate.h"
+    header "WL.h"
+    header "WLActionReceiver.h"
+    header "WLWebFrameworkInitResult.h"
+    header "NativePage.h"
+    
+    export * module * { export * } }
+
+
+

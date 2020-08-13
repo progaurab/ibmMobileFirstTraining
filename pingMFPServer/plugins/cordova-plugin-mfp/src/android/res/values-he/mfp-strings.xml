@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<resources>
+  
+  <!-- General purpose strings -->
+  <string name="error">שגיאה</string>
+  <string name="close">סגירה</string>
+  <string name="cancel">ביטול</string>
+  
+  <!--  Settings Screen: Web Resources category -->
+  <string name="wlWebResourcesCategory">משאבי רשת</string>
+  <string name="wlAppIdTitle">זיהוי יישום</string>
+  <string name="wlAppVersionTitle">גרסת יישום</string>
+  <string name="downloadingWebResourcesMessage">הורדת משאבי היישום (התקדמות בקילותבים)</string>
+  <string name="unpackingWebResourcesMessage">פריסת מארז...‏</string>
+  
+  <!-- Direct Update -->
+  <string name="directUpdateDownloadingMessage">הורדת עדכון היישום (התקדמות בקילותבים)</string>
+  <string name="kb">%1$d/%2$d kb</string> 
+  
+  <!-- IBM MobileFirst Platform initialization errors -->
+  <string name="worklightInitInternalError">היישום נתקל בשגיאה פנימית. התקינו את היישום מחדש ונסו שוב.</string>
+  <string name="worklightInitNotEnoughSpace">התקנת היישום נכשלה מפני שאין מספיק שטח אחסון זמין. פנו %1$s MB ושגרו את היישום שוב</string>   
+</resources>

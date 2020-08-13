@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<resources>
+  
+  <!-- General purpose strings -->
+  <string name="error">Erro</string>
+  <string name="close">Fechar</string>
+  <string name="cancel">Cancelar</string>
+  
+  <!--  Settings Screen: Web Resources category -->
+  <string name="wlWebResourcesCategory">Recursos da Web</string>
+  <string name="wlAppIdTitle">ID do Aplicativo</string>
+  <string name="wlAppVersionTitle">Versão do Aplicativo</string>
+  <string name="downloadingWebResourcesMessage">Fazendo download de recursos de aplicativo (progresso em kilobytes)</string>
+  <string name="unpackingWebResourcesMessage">Desempacotando...</string>
+  
+  <!-- Direct Update -->
+  <string name="directUpdateDownloadingMessage">Fazendo download de atualização do aplicativo (progresso em kilobytes)</string>
+  <string name="kb">%1$d/%2$d kb</string> 
+  
+  <!-- IBM MobileFirst Platform initialization errors -->
+  <string name="worklightInitInternalError">O aplicativo encontrou um erro interno. Reinstale o aplicativo e tente novamente.</string>
+  <string name="worklightInitNotEnoughSpace">A instalação do aplicativo falhou porque não há espaço de armazenamento suficiente disponível. Libere %1$s MB e ative novamente o aplicativo</string>   
+</resources>

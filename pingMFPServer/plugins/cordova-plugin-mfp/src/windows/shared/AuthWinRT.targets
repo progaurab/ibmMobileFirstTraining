@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="PlatformCheck" BeforeTargets="ResolveAssemblyReferences"
+    Condition=" ( ('$(Platform)' != 'x86') AND ('$(Platform)' != 'ARM') AND ('$(Platform)' != 'x64'))">
+    <Error Text="Project does not work correctly on '$(Platform)' platform. You need to specify platform (x86 or ARM or x64)." />
+  </Target>
+
+</Project>

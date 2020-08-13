@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<resources>
+  
+  <!-- General purpose strings -->
+  <string name="error">Ошибка</string>
+  <string name="close">Закрыть</string>
+  <string name="cancel">Отмена</string>
+  
+  <!--  Settings Screen: Web Resources category -->
+  <string name="wlWebResourcesCategory">Веб-ресурсы</string>
+  <string name="wlAppIdTitle">ИД приложения</string>
+  <string name="wlAppVersionTitle">Версия приложения</string>
+  <string name="downloadingWebResourcesMessage">Загрузка ресурсов приложения (загружено килобайт)</string>
+  <string name="unpackingWebResourcesMessage">Распаковка...</string>
+  
+  <!-- Direct Update -->
+  <string name="directUpdateDownloadingMessage">Загрузка обновления приложения (загружено килобайт)</string>
+  <string name="kb">%1$d/%2$d КБ</string> 
+  
+  <!-- IBM MobileFirst Platform initialization errors -->
+  <string name="worklightInitInternalError">Во время выполнения приложения произошла внутренняя ошибка. Повторно установите приложение и повторите попытку.</string>
+  <string name="worklightInitNotEnoughSpace">Не удалось установить приложение из-за нехватки памяти. Освободите %1$s Мб и перезапустите приложение.</string>   
+</resources>
