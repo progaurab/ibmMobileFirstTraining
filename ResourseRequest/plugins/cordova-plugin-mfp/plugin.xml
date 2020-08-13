@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-mfp" version="8.0.2020081211" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>IBM MobileFirst Platform Foundation</name>
+    <description>IBM MobileFirst Platform Foundation Cordova Plugin</description>
+    <license>IBM</license>
+    <keywords>cordova,ibm,worklight,mobilefirst,mfp</keywords>
+    <issue>https://www.ibm.com/support</issue>
+    <engines>
+        <engine name="cordova-android" version="&gt;=6.1.2 &lt;10" />
+        <engine name="cordova-ios" version="&gt;=4.1.1 &lt;6" />
+        <engine name="cordova-windows" version="&gt;=4.3.2 &lt;8" />
+        <engine name="cordova-plugman" version="&gt;=6.1.1 &lt;10" />
+    </engines>
+    <hook src="hooks/bootstrap.js" type="before_prepare"/>
+    <hook src="hooks/bootstrap.js" type="after_prepare"/>
+    <hook src="hooks/bootstrap.js" type="before_plugin_uninstall" />
+    <hook src="hooks/bootstrap.js" type="before_plugin_install" />
+    <hook src="hooks/bootstrap.js" type="after_plugin_install" />
+    <hook src="hooks/bootstrap.js" type="before_compile" />
+    <hook src="hooks/bootstrap.js" type="before_run" />
+    <hook src="hooks/bootstrap.js" type="before_emulate" />
+    <dependency id="cordova-plugin-device" version="&gt;=1.0.1" />
+    <dependency id="cordova-plugin-dialogs" version="&gt;=1.1.1" />
+    <dependency id="cordova-plugin-globalization" version="&gt;=1.11.0" />
+    <platform name="android">
+        <dependency id="cordova-plugin-okhttp" version="&gt;=2.0.0" />
+        <js-module name="mfp" src="bootstrap.js">
+            <runs />
+        </js-module>
+        <framework custom="true" src="src/android/build-extras.gradle" type="gradleReference" />
+        <asset src="www/worklight" target="plugins/cordova-plugin-mfp/worklight" />
+        <asset src="src/android/assets/www/worklight" target="plugins/cordova-plugin-mfp/worklight" />
+        <config-file parent="/*" target="config.xml">
+            <feature name="WLInitializationPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WLInitializationPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+            <feature name="LoggerPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.LoggerPlugin" />
+            </feature>
+            <feature name="WLApp">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WLApp" />
+            </feature>
+            <feature name="NativePage">
+                <param name="android-package" value="com.worklight.androidgap.plugin.NativePage" />
+            </feature>
+            <feature name="SecurityPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.SecurityPlugin" />
+            </feature>
+            <feature name="NetworkDetector">
+                <param name="android-package" value="com.worklight.androidgap.plugin.NetworkDetector" />
+            </feature>
+            <feature name="DeviceAuth">
+                <param name="android-package" value="com.worklight.androidgap.plugin.DeviceAuthPlugin" />
+            </feature>
+            <feature name="WifiPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WifiPlugin" />
+            </feature>
+            <feature name="FIPSHttpPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.FIPSHttpPlugin" />
+            </feature>
+            <feature name="WLCustomDialog">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WLCustomDialog" />
+            </feature>
+            <feature name="WLSplashScreen">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WLSplashScreenPlugin" />
+            </feature>
+            <feature name="WLAuthorizationManagerPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WLAuthorizationManagerPlugin" />
+            </feature>
+            <feature name="WLDirectUpdatePlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WLDirectUpdatePlugin" />
+            </feature>
+            <feature name="WLNativeXHRPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WLNativeXHRPlugin" />
+            </feature>
+            <feature name="WLActionSenderPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WLActionSenderPlugin" />
+            </feature>
+            <feature name="WLCertificatePinningPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WLCertificatePinningPlugin" />
+            </feature>
+            <feature name="WLResourceRequestPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.WLResourceRequestPlugin" />
+            </feature>
+            <feature name="ChallengeHandlerPlugin">
+                <param name="android-package" value="com.worklight.androidgap.plugin.ChallengeHandlerPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <activity android:name="com.worklight.wlclient.ui.UIActivity" />
+        </config-file>
+        <lib-file src="src/android/libs/ibmmobilefirstplatformfoundation.jar" />
+        <resource-file src="src/android/libs/armeabi/libauthjni.so" target="jniLibs/armeabi/libauthjni.so" />
+        <resource-file src="src/android/libs/armeabi-v7a/libauthjni.so" target="jniLibs/armeabi-v7a/libauthjni.so" />
+        <resource-file src="src/android/libs/mips/libauthjni.so" target="jniLibs/mips/libauthjni.so" />
+        <resource-file src="src/android/libs/mips64/libauthjni.so" target="jniLibs/mips64/libauthjni.so" />
+        <resource-file src="src/android/libs/x86/libauthjni.so" target="jniLibs/x86/libauthjni.so" />
+
+         <resource-file src="src/android/libs/arm64-v8a/libauthjni.so" target="jniLibs/arm64-v8a/libauthjni.so" />
+        <resource-file src="src/android/libs/x86_64/libauthjni.so" target="jniLibs/x86_64/libauthjni.so" />
+
+
+        <resource-file src="src/android/libs/armeabi/libauthjni.so" target="libs/armeabi/libauthjni.so" />
+        <resource-file src="src/android/libs/armeabi-v7a/libauthjni.so" target="libs/armeabi-v7a/libauthjni.so" />
+        <resource-file src="src/android/libs/mips/libauthjni.so" target="libs/mips/libauthjni.so" />
+        <resource-file src="src/android/libs/mips64/libauthjni.so" target="libs/mips64/libauthjni.so" />
+        <resource-file src="src/android/libs/x86/libauthjni.so" target="libs/x86/libauthjni.so" />
+
+        <resource-file src="src/android/libs/arm64-v8a/libauthjni.so" target="libs/arm64-v8a/libauthjni.so" />
+        <resource-file src="src/android/libs/x86_64/libauthjni.so" target="libs/x86_64/libauthjni.so" />
+        <resource-file src="src/android/res/drawable-hdpi/splash.9.png" target="res/drawable-hdpi/splash.9.png" />
+        <resource-file src="src/android/res/drawable-ldpi/splash.9.png" target="res/drawable-ldpi/splash.9.png" />
+        <resource-file src="src/android/res/drawable-mdpi/splash.9.png" target="res/drawable-mdpi/splash.9.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/splash.9.png" target="res/drawable-xhdpi/splash.9.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/splash.9.png" target="res/drawable-xxhdpi/splash.9.png" />
+        <resource-file src="src/android/res/values/mfp-strings.xml" target="res/values/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-de/mfp-strings.xml" target="res/values-de/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-es/mfp-strings.xml" target="res/values-es/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-fr/mfp-strings.xml" target="res/values-fr/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-he/mfp-strings.xml" target="res/values-he/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-it/mfp-strings.xml" target="res/values-it/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-iw/mfp-strings.xml" target="res/values-iw/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-ja/mfp-strings.xml" target="res/values-ja/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-ko/mfp-strings.xml" target="res/values-ko/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-pt-rBR/mfp-strings.xml" target="res/values-pt-rBR/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-ru/mfp-strings.xml" target="res/values-ru/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-zh/mfp-strings.xml" target="res/values-zh/mfp-strings.xml" />
+        <resource-file src="src/android/res/values-zh-rTW/mfp-strings.xml" target="res/values-zh-rTW/mfp-strings.xml" />
+        <resource-file src="src/android/res/xml/mfp_backup_rules.xml" target="res/xml/mfp_backup_rules.xml"/>
+        <resource-file src="src/android/proguard-project-mfp.txt" target="proguard-project-mfp.txt" />
+        <resource-file src="src/android/MFPApplication.java" target="java/com/ibm/MFPApplication.java" />
+        <resource-file src="src/android/MFPApplication.java" target="src/com/ibm/MFPApplication.java" />
+
+    </platform>
+    <platform name="ios">
+        <js-module name="mfp" src="bootstrap.js">
+            <runs />
+        </js-module>
+        <asset src="www/worklight" target="plugins/cordova-plugin-mfp/worklight" />
+        <asset src="src/ios/www/worklight" target="plugins/cordova-plugin-mfp/worklight" />
+        <config-file parent="/*" target="config.xml">
+            <feature name="WLSplashScreen">
+                <param name="ios-package" value="WLSplashPlugin" />
+            </feature>
+            <feature name="LoggerPlugin">
+                <param name="ios-package" value="LoggerPlugin" />
+            </feature>
+            <feature name="DeviceAuth">
+                <param name="ios-package" value="DeviceAuthPlugin" />
+            </feature>
+            <feature name="WLDirectUpdatePlugin">
+                <param name="ios-package" value="WLDirectUpdatePlugin" />
+            </feature>
+            <feature name="WLApp">
+                <param name="ios-package" value="WLApp" />
+                <param name="onload" value="true" />
+            </feature>
+            <feature name="UIControls">
+                <param name="ios-package" value="UIControls" />
+            </feature>
+            <feature name="NetworkDetector">
+                <param name="ios-package" value="NetworkDetector" />
+            </feature>
+            <feature name="NativePage">
+                <param name="ios-package" value="NativePage" />
+            </feature>
+            <feature name="SecurityPlugin">
+                <param name="ios-package" value="SecurityPlugin" />
+            </feature>
+            <feature name="StoragePlugin">
+                <param name="ios-package" value="StoragePlugin" />
+            </feature>
+            <feature name="FIPSHttpPlugin">
+                <param name="ios-package" value="FIPSHttpPlugin" />
+            </feature>
+            <feature name="Badge">
+                <param name="ios-package" value="Badge" />
+            </feature>
+            <feature name="NotificationEx">
+                <param name="ios-package" value="NotificationEx" />
+            </feature>
+            <feature name="WifiPlugin">
+                <param name="ios-package" value="WifiPlugin" />
+            </feature>
+            <feature name="WLNativeXHRPlugin">
+                <param name="ios-package" value="WLNativeXHRPlugin" />
+            </feature>
+            <feature name="WLActionSenderPlugin">
+                <param name="ios-package" value="WLActionSenderPlugin" />
+            </feature>
+            <feature name="WLAuthorizationManagerPlugin">
+                <param name="ios-package" value="WLAuthorizationManagerPlugin" />
+            </feature>
+            <feature name="WLCertificatePinningPlugin">
+                <param name="ios-package" value="WLCertificatePinningPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/CDVWKWebViewEngine+MFP.m" />
+        <framework custom="true" src="src/ios/Frameworks/IBMMobileFirstPlatformFoundationHybrid.framework" />
+        <framework custom="true" src="src/ios/Frameworks/IBMMobileFirstPlatformFoundation.framework" />
+        <resource-file src="src/ios/Resources/Localizations.bundle" />
+        <framework src="libz.tbd" />
+        <framework src="libc++.tbd" />
+        <framework src="Security.framework" />
+        <framework src="WebKit.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <resource-file src="src/ios/mfpclient.plist" />
+    </platform>
+    <platform name="windows">
+        <js-module name="mfp" src="bootstrap.js">
+            <runs />
+        </js-module>
+        <asset src="www/worklight/wljq.js" target="plugins/cordova-plugin-mfp/worklight/wljq.js" />
+        <asset src="www/worklight/analytics" target="plugins/cordova-plugin-mfp/worklight/analytics" />
+        <asset src="www/worklight/messages/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/messages.json" />
+        <asset src="www/worklight/messages/de/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_de/messages.json" />
+        <asset src="www/worklight/messages/es/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_es/messages.json" />
+        <asset src="www/worklight/messages/fr/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_fr/messages.json" />
+        <asset src="www/worklight/messages/he/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_he/messages.json" />
+        <asset src="www/worklight/messages/it/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_it/messages.json" />
+        <asset src="www/worklight/messages/ja/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_ja/messages.json" />
+        <asset src="www/worklight/messages/ko/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_ko/messages.json" />
+        <asset src="www/worklight/messages/pt-BR/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_pt-BR/messages.json" />
+        <asset src="www/worklight/messages/ru/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_ru/messages.json" />
+        <asset src="www/worklight/messages/zh/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_zh/messages.json" />
+        <asset src="www/worklight/messages/zh-TW/messages.json" target="plugins/cordova-plugin-mfp/worklight/messages/windows_zh-TW/messages.json" />
+        <asset src="src/windows/www/worklight" target="plugins/cordova-plugin-mfp/worklight" />
+        <config-file parent="/*" target="config.xml">
+            <feature name="DeviceInfo">
+                <param name="wp-package" value="DeviceInfo" />
+            </feature>
+            <feature name="DeviceAuth">
+                <param name="wp-package" value="DeviceAuth" />
+            </feature>
+            <feature name="WifiPlugin">
+                <param name="wp-package" value="WifiPlugin" />
+            </feature>
+            <feature name="WLCustomDialog">
+                <param name="wp-package" value="WLCustomDialog" />
+            </feature>
+            <feature name="WLOpenURL">
+                <param name="wp-package" value="WLOpenURL" />
+            </feature>
+            <feature name="WLNativePage">
+                <param name="wp-package" value="WLNativePage" />
+            </feature>
+            <feature name="StoragePlugin">
+                <param name="wp-package" value="StoragePlugin" />
+            </feature>
+            <feature name="WLDirectUpdatePlugin">
+                <param name="wp-package" value="WLDirectUpdatePlugin" />
+            </feature>
+            <feature name="Badge">
+                <param name="wp-package" value="Badge" />
+            </feature>
+            <feature name="WLNativeXHRPlugin">
+                <param name="wp-package" value="WLNativeXHRPlugin" />
+            </feature>
+            <feature name="WLActionSenderPlugin">
+                <param name="wp-package" value="WLActionSenderPlugin" />
+            </feature>
+            <feature name="SecurityPlugin">
+                <param name="wp-package" value="SecurityPlugin" />
+            </feature>
+            <feature name="WLSplashScreen">
+                <param name="wp-package" value="WLSplashScreen" />
+            </feature>
+            <feature name="WLApp">
+                <param name="wp-package" value="WLApp" />
+            </feature>
+            <feature name="WLAuthorizationManagerPlugin">
+                <param name="wp-package" value="WLAuthorizationManagerPlugin" />
+            </feature>
+        </config-file>
+        <framework custom="true" src="src/windows/shared/Newtonsoft.Json.dll" target="all" />
+        <framework custom="true" src="src/windows/shared/SharpCompress.dll" target="all" />
+        <lib-file arch="x86" src="Microsoft.VCLibs, Version=12.0" target="win" />
+        <lib-file arch="x64" src="Microsoft.VCLibs, Version=12.0" target="win" />
+        <lib-file arch="ARM" src="Microsoft.VCLibs, Version=12.0" target="win" />
+        <lib-file arch="x86" src="Microsoft.VCLibs, Version=12.0" target="phone" />
+        <lib-file arch="ARM" src="Microsoft.VCLibs, Version=12.0" target="phone" />
+        <framework arch="x86" custom="true" src="src/windows/buildtarget/x86/WLWin8Native.winmd" target="win" target-dir="win/x86" />
+        <framework arch="x64" custom="true" src="src/windows/buildtarget/x64/WLWin8Native.winmd" target="win" target-dir="win/x64" />
+        <framework arch="ARM" custom="true" src="src/windows/buildtarget/ARM/WLWin8Native.winmd" target="win" target-dir="win/ARM" />
+        <framework arch="x86" custom="true" src="src/windows/buildtarget/wp/x86/WLWin8Native.winmd" target="phone" target-dir="phone/x86" />
+        <framework arch="ARM" custom="true" src="src/windows/buildtarget/wp/ARM/WLWin8Native.winmd" target="phone" target-dir="phone/ARM" />
+        <resource-file src="src/windows/shared/AuthWinRT.targets" target="AuthWinRT.targets" />
+        <resource-file src="src/windows/shared/mfpclient.properties" target="mfpclient.properties" />
+    </platform>
+    <platform name="browser">
+        <js-module name="mfp" src="src/browser/bootstrap.js">
+            <runs />
+        </js-module>
+        <asset src="www/worklight" target="plugins/cordova-plugin-mfp/worklight" />
+        <asset src="src/browser/ibmmfpf.js" target="plugins/cordova-plugin-mfp/worklight/ibmmfpf.js" />
+        <asset src="typings" target="plugins/cordova-plugin-mfp/worklight/typings" />
+        <asset src="node_modules/express" target="plugins/cordova-plugin-mfp/worklight/node_modules/express" />
+        <asset src="node_modules/request" target="plugins/cordova-plugin-mfp/worklight/node_modules/request" />
+        <asset src="node_modules/jssha" target="plugins/cordova-plugin-mfp/worklight/node_modules/jssha" />
+        <asset src="node_modules/promiz" target="plugins/cordova-plugin-mfp/worklight/node_modules/promiz" />
+        <asset src="node_modules/sjcl" target="plugins/cordova-plugin-mfp/worklight/node_modules/sjcl" />
+        <asset src="src/browser/proxy.js" target="plugins/cordova-plugin-mfp/worklight/proxy.js" />
+    </platform>
+</plugin>

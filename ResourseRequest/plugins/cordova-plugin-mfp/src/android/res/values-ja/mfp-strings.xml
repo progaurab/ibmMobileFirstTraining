@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<resources>
+  
+  <!-- General purpose strings -->
+  <string name="error">エラー</string>
+  <string name="close">閉じる</string>
+  <string name="cancel">キャンセル</string>
+  
+  <!--  Settings Screen: Web Resources category -->
+  <string name="wlWebResourcesCategory">Web リソース</string>
+  <string name="wlAppIdTitle">アプリケーション ID</string>
+  <string name="wlAppVersionTitle">アプリケーション・バージョン</string>
+  <string name="downloadingWebResourcesMessage">アプリケーション・リソースをダウンロード中 (進行状況 (キロバイト単位))</string>
+  <string name="unpackingWebResourcesMessage">アンパック中...</string>
+  
+  <!-- Direct Update -->
+  <string name="directUpdateDownloadingMessage">アプリケーション更新をダウンロード中 (進行状況 (キロバイト単位))</string>
+  <string name="kb">%1$d/%2$d kb</string> 
+  
+  <!-- IBM MobileFirst Platform initialization errors -->
+  <string name="worklightInitInternalError">アプリケーションで内部エラーが発生しました。アプリケーションを再インストールし、再試行してください。</string>
+  <string name="worklightInitNotEnoughSpace">アプリケーションのインストールは、使用可能なストレージ・スペースが十分ではないため失敗しました。%1$s MB を解放し、アプリケーションを再始動してください。</string>   
+</resources>

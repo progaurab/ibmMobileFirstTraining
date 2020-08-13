@@ -1,0 +1,56 @@
+android {
+    buildTypes {
+        release {
+            minifyEnabled true
+            File androidVersionFile = new File("$project.rootDir/../../node_modules/cordova-android/VERSION");
+
+            BufferedReader br = null;
+            FileReader fr = null;
+            String sAndroidVersion = "";
+            //check if cordova-android version file exists
+            if (androidVersionFile.exists()) { //cordova plugman version >=8
+                try {
+                    fr = new FileReader(androidVersionFile);
+                    br = new BufferedReader(fr);
+                    sAndroidVersion =   br.readLine();
+
+                } catch (Exception e) {
+                    e.printStackTrace()
+                } finally {
+                    if (br != null)
+                        br.close();
+                    if (fr != null)
+                        fr.close();
+                }
+                if (Character.getNumericValue(sAndroidVersion.charAt(0)) >= 7) { //cordova-android version >=7
+                    proguardFiles getDefaultProguardFile('proguard-android.txt'), '../app/src/main/proguard-project-mfp.txt'
+                } else { //cordova-android version <7
+                    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project-mfp.txt'
+                }
+
+            } else {  //cordova plugman version <8 and cordova-android version <7
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project-mfp.txt'
+            }
+
+
+        }
+    }
+
+    lintOptions {
+        abortOnError false;
+        disable 'MissingTranslation'
+    }
+
+    packagingOptions {
+        pickFirst 'META-INF/ASL2.0'
+        pickFirst 'META-INF/LICENSE'
+        pickFirst 'META-INF/NOTICE'
+    }
+    
+     dependencies {
+     
+   implementation "com.squareup.okhttp3:okhttp-urlconnection:3.4.1"
+   implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+   
+}
+}

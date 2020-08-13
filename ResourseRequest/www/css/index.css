@@ -1,0 +1,46 @@
+body {
+	-webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+	margin: 0;
+	font-family: sans-serif;
+	background-color: #ccc;
+}
+
+#wrapper {
+	margin-left: 8px;
+	padding-top: 50px;
+	width: 94%;
+}
+
+#header {
+	text-align: center;
+	background-color: #1D4D90;
+	color: #F9FAFB;
+	height: 38px;
+	line-height: 38px;
+	border-bottom: 1px solid white;
+	position: fixed;
+	width: 100%;
+	padding-top: 5px;
+}
+
+h1 {
+	margin: 0;
+	font-size: 18px;
+	font-family: inherit;
+}
+
+input {
+    display: inline-block;
+	margin-bottom: 5px;
+    padding-left: 5px;
+	font-size: 90%;
+	height: 26px;
+	width: 99%;
+}
+
+.submit {
+	width: 30%;
+	height: 3em;
+	background-color: #eee;
+}
