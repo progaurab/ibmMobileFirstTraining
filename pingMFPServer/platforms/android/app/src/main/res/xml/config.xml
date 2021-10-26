@@ -1,77 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:mfp="http://www.ibm.com/mobilefirst/cordova-plugin-mfp">
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
-    <feature name="Notification">
-        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
-    </feature>
-    <feature name="Globalization">
-        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
-    </feature>
-    <feature name="OkHttpPlugin">
-        <param name="android-package" value="com.google.cordova.OkHttpPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="WLInitializationPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WLInitializationPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="LoggerPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.LoggerPlugin" />
-    </feature>
-    <feature name="WLApp">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WLApp" />
-    </feature>
-    <feature name="NativePage">
-        <param name="android-package" value="com.worklight.androidgap.plugin.NativePage" />
-    </feature>
-    <feature name="SecurityPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.SecurityPlugin" />
-    </feature>
-    <feature name="NetworkDetector">
-        <param name="android-package" value="com.worklight.androidgap.plugin.NetworkDetector" />
-    </feature>
-    <feature name="DeviceAuth">
-        <param name="android-package" value="com.worklight.androidgap.plugin.DeviceAuthPlugin" />
-    </feature>
-    <feature name="WifiPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WifiPlugin" />
-    </feature>
-    <feature name="FIPSHttpPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.FIPSHttpPlugin" />
-    </feature>
-    <feature name="WLCustomDialog">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WLCustomDialog" />
-    </feature>
-    <feature name="WLSplashScreen">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WLSplashScreenPlugin" />
-    </feature>
-    <feature name="WLAuthorizationManagerPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WLAuthorizationManagerPlugin" />
-    </feature>
-    <feature name="WLDirectUpdatePlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WLDirectUpdatePlugin" />
-    </feature>
-    <feature name="WLNativeXHRPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WLNativeXHRPlugin" />
-    </feature>
-    <feature name="WLActionSenderPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WLActionSenderPlugin" />
-    </feature>
-    <feature name="WLCertificatePinningPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WLCertificatePinningPlugin" />
-    </feature>
-    <feature name="WLResourceRequestPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.WLResourceRequestPlugin" />
-    </feature>
-    <feature name="ChallengeHandlerPlugin">
-        <param name="android-package" value="com.worklight.androidgap.plugin.ChallengeHandlerPlugin" />
-    </feature>
     <name>HelloCordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -89,7 +17,7 @@
     <allow-intent href="geo:*" />
     <mfp:android>
         <mfp:sdkChecksum>3529416104</mfp:sdkChecksum>
-        <mfp:appChecksum>0</mfp:appChecksum>
+        <mfp:appChecksum>659222889</mfp:appChecksum>
         <mfp:security>
             <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
         </mfp:security>
@@ -131,4 +59,21 @@
     <mfp:APIproxyURL>/adapters/MobileAPIProxy</mfp:APIproxyURL>
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
+    </feature>
+    <feature name="OkHttpPlugin">
+        <param name="android-package" value="com.google.cordova.OkHttpPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>

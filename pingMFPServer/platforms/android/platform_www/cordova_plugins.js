@@ -39,20 +39,13 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "navigator.globalization"
       ]
-    },
-    {
-      "id": "cordova-plugin-mfp.mfp",
-      "file": "plugins/cordova-plugin-mfp/bootstrap.js",
-      "pluginId": "cordova-plugin-mfp",
-      "runs": true
     }
   ];
   module.exports.metadata = {
-    "cordova-plugin-whitelist": "1.3.4",
     "cordova-plugin-device": "2.0.3",
     "cordova-plugin-dialogs": "2.0.2",
     "cordova-plugin-globalization": "1.11.0",
     "cordova-plugin-okhttp": "2.0.0",
-    "cordova-plugin-mfp": "8.0.2020072706"
+    "cordova-plugin-whitelist": "1.3.4"
   };
 });
